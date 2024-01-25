@@ -1,0 +1,56 @@
+{
+  "name": "telegram-rss",
+  "version": "1.0.0",
+  "description": "A simple converter Telegram channel to RSS Feeds",
+  "main": "dist/cjs/telegram-rss.js",
+  "module": "dist/mjs/telegram-rss.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/telegram-rss.js",
+      "require": "./dist/cjs/telegram-rss.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npm run build && node public/test/server.js",
+    "start-mjs": "npm run build && node public/test/server-mjs.js",
+    "dev-tes": "nodemon -x ts-node public/test/server",
+    "dev": "nodemon -e js,ts --watch src --watch test --exec \"npm start\"",
+    "dev-mjs": "nodemon -e js,ts --watch src --watch test --exec \"npm run start-mjs\"",
+    "build-win": "npm run prepare-build-win && tsc -p tsconfig-mjs.json && tsc -p tsconfig-cjs.json && echo {\"type\": \"commonjs\"}>dist\\cjs\\package.json && echo {\"type\": \"module\"}>dist\\mjs\\package.json",
+    "prepare-build": "if exist .\\dist (echo ok) && mkdir dist && del /S /Q .\\dist\\*",
+    "prepare-build-win": "if not exist .\\dist (mkdir dist) else (rmdir /S /Q .\\dist\\)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuzulul/telegram-rss.git"
+  },
+  "keywords": [
+    "telegram",
+    "telegram-bot",
+    "telegram-api",
+    "node-js",
+    "telegram-rss",
+    "telegram-scraper",
+    "telegram-channel-scraper",
+    "telegram-channel-rss",
+    "telegram-to-rss",
+    "telegram-channel-to-rss",
+    "telegram-rss-generator"
+  ],
+  "author": "Nuzulul Zulkarnain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nuzulul/telegram-rss/issues"
+  },
+  "homepage": "https://github.com/nuzulul/telegram-rss#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "telegram-scraper": "^1.0.0"
+  }
+}
