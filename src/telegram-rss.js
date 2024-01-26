@@ -1,6 +1,6 @@
-import telegram_scraper from 'telegram-scraper'
+import {telegram_scraper} from 'telegram-scraper'
 
-export default async function telegram_rss(channel){
+export async function telegram_rss(channel){
 
 	var HtmlEntities = function() {};
 

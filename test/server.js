@@ -1,4 +1,4 @@
-const telegram_rss = require('./../src/telegram-rss').default
+const {telegram_rss} = require('./../src/telegram-rss')
 
 const http = require('http')
 

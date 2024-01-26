@@ -1,6 +1,6 @@
 {
   "name": "telegram-rss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple converter Telegram channel to RSS Feeds",
   "main": "dist/cjs/telegram-rss.js",
   "module": "dist/mjs/telegram-rss.js",
@@ -22,6 +22,10 @@
     "prepare-build": "if exist .\\dist (echo ok) && mkdir dist && del /S /Q .\\dist\\*",
     "prepare-build-win": "if not exist .\\dist (mkdir dist) else (rmdir /S /Q .\\dist\\)"
   },
+  "files": [
+    "dist/",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuzulul/telegram-rss.git"
@@ -51,6 +55,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "telegram-scraper": "^1.0.0"
+    "telegram-scraper": "^1.0.1"
   }
 }

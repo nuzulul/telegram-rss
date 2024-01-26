@@ -23,7 +23,7 @@ npm install telegram-rss
 ## Example Usage
 
 ```javascript
-import telegram_rss from 'telegram-rss'
+import {telegram_rss} from 'telegram-rss'
 
 void async function main() {
 
@@ -37,7 +37,7 @@ void async function main() {
 ```
 
 ```javascript
-const telegram_rss = require('telegram-rss').default
+const {telegram_rss} = require('telegram-rss')
 
 void async function main() {
 
@@ -53,7 +53,7 @@ void async function main() {
 ## Example App
 
 ```javascript
-const telegram_rss = require('telegram-rss').default
+const {telegram_rss} = require('telegram-rss')
 
 const http = require('http')
 

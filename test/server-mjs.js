@@ -1,4 +1,4 @@
-import telegram_rss from './../src/telegram-rss'
+import {telegram_rss} from './../src/telegram-rss'
 
 import http from 'http'
 
