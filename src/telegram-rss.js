@@ -292,6 +292,7 @@ export async function telegram_rss(channel){
 		let msg = data[i].message_text
 		if(msg == ''){
 			title = data[i].data_post
+			continue
 		}else{
 			if(msg.length < 250){
 				title = msg
